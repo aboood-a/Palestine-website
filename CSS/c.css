@@ -1,0 +1,237 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(30, 0, 0, 0.95); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+}
+
+nav img.logos_name {
+    width: 150px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul.navlist li, nav ul.navlist2 li {
+    margin-left: 30px;
+}
+
+nav ul.navlist li a, nav ul.navlist2 li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul.navlist li a:hover, nav ul.navlist2 li a:hover {
+    color: #ff3b3b; 
+}
+
+section article h1.onvid {
+    font-size: 48px;
+    color: #ff3b3b;
+    text-align: center;
+    margin-top: 120px; 
+    text-shadow: 2px 2px 5px black;
+}
+
+section article h4.onvid {
+    font-size: 24px;
+    color: #ffa07a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section article video {
+    display: block;
+    max-width: 90%;
+    margin: 0 auto 40px auto;
+    border: 4px solid #ff3b3b;
+    border-radius: 10px;
+}
+
+article {
+    padding: 50px 10%;
+    background-color: rgba(40, 0, 0, 0.85); 
+    margin: 30px auto;
+    border-left: 8px solid #ff3b3b;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+}
+
+article h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff6b6b; 
+    text-shadow: 1px 1px 3px black;
+}
+
+article p {
+    font-size: 18px;
+    color: #f5f5f5;
+}
+
+article h2::before {
+    content: '🟥 ';
+    font-size: 24px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2a0000;
+    color: #f5f5f5;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    article {
+        padding: 30px 5%;
+    }
+
+    section article h1.onvid {
+        font-size: 36px;
+    }
+
+    section article h4.onvid {
+        font-size: 20px;
+    }
+
+    article h2 {
+        font-size: 22px;
+    }
+
+    article p {
+        font-size: 16px;
+    }
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+article{
+    
+}
+
+footer a{
+    color: white;
+}
+
+article.bombings {
+    border-left: 8px solid #ff0000;
+    background-color: rgba(60, 0, 0, 0.9);
+}
+
+article.bombings h2 {
+    color: #ff1a1a;
+    text-shadow: 2px 2px 5px black;
+}
+section article {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+section article video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+section article h1.onvid {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #ff3b3b;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px black;
+    z-index: 10;
+}
+
+section article h4.onvid {
+    position: absolute;
+    top: 90px;
+    right: 40px;
+    color: #ffa07a;
+    font-size: 28px;
+    text-shadow: 2px 2px 6px black;
+    z-index: 10;
+}
+
+section article video::-webkit-media-controls-panel {
+    background-color: rgba(0,0,0,0.5); 
+}
+
+section article video::-webkit-media-controls-play-button,
+section article video::-webkit-media-controls-volume-slider {
+    filter: invert(100%) brightness(150%);
+}
+
+@media screen and (max-width: 768px) {
+    section article h1.onvid {
+        font-size: 36px;
+        top: 15px;
+        right: 20px;
+    }
+
+    section article h4.onvid {
+        font-size: 18px;
+        top: 60px;
+        right: 20px;
+    }
+
+    section article {
+        height: 50vh;
+    }
+}
